@@ -1,0 +1,158 @@
+$blue: #5372F0;
+$dark-blue: #202842;
+$ligth-gray: #c3c4c8;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.2s ease-in;
+    -webkit-transition: all 0.2s ease-in;
+    -moz-transition: all 0.2s ease-in;
+    -ms-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+}
+ul{
+    list-style: none;
+    display: flex;
+}
+
+body{
+    background-color: $blue;
+    max-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+main{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    // height: 60%;
+    width: 605px;
+    @media (max-width:600px) {
+        width: 80%;
+    }
+    header{
+        text-align: center;
+        font-size: 30px;
+        font-weight: 600;
+        margin: 15px auto 20px;
+        color: $dark-blue;
+    }
+    .content{
+        .quote{
+            display: flex;
+            text-align: center;
+            span:first-child{
+                margin-right: 5px;
+                color: $dark-blue;
+            }
+            p{
+                font-size: 25px;
+                color: $dark-blue;
+            }
+            span:last-child{
+                align-items: self-end;
+                display: flex;
+                align-content: center;
+                justify-content: flex-start;
+                color: $dark-blue;
+            }
+        }
+        .author{
+            display: flex;
+            justify-content: flex-end;
+            width: 100%;
+            margin: 30px 0;
+            padding-bottom: 39px;
+            font-size: 20px;
+            color: #202842;
+            border-bottom: 1px solid $ligth-gray;
+            .name{
+                font-style: italic;
+                font-weight: 400;
+            }
+        }
+    }
+    .buttons{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 20px 0 25px;
+        ul{
+            li{
+                width: 45px;
+                height: 45px;
+                background-color: white;
+                margin: 0 7px;
+                border-radius: 50%;
+                -webkit-border-radius: 50%;
+                -moz-border-radius: 50%;
+                -ms-border-radius: 50%;
+                -o-border-radius: 50%;
+                line-height: 45px;
+                text-align: center;
+                color: $blue;
+                border: 2px solid $blue;
+                cursor: pointer;
+                &:hover{
+                    background-color: $blue;
+                    color: white;
+                }
+                
+            }
+        }
+        .left{
+            .new-quote{
+                
+                background-color: #5372F0;
+                color: white;
+                padding: 13px 17px;
+                border-radius: 18px;
+                -webkit-border-radius: 37px;
+                -moz-border-radius: 18px;
+                -ms-border-radius: 18px;
+                -o-border-radius: 18px;
+                outline: none;
+                border: none;
+                cursor: pointer;
+                font-size: 18px;
+                @media (max-width:450px) {
+                    margin-top: 20px;
+                    width: 80%;
+                }
+            }
+            @media (max-width:450px) {
+                width: 100%;
+                text-align: center;
+            }
+        }
+       
+        @media (max-width:450px) {
+           flex-direction: column;
+        }
+    }
+
+}
+
+.loading{
+    background-color: $ligth-gray !important;
+}
+.active{
+    background-color: $blue !important;
+    color: white !important;
+}
